@@ -17,14 +17,17 @@ MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title) 
     grid->CreateGrid(5, 5, wxGrid::wxGridSelectCells);  // 5 rows and 5 columns
 
     // Set column labels
-    grid->SetColLabelValue(0, "Name");
+    /*grid->SetColLabelValue(0, "Name");
     grid->SetColLabelValue(1, "Age");
     grid->SetColLabelValue(2, "Country");
     grid->SetColLabelValue(3, "Chart");
-    grid->SetColLabelValue(4, "Actions");
+    grid->SetColLabelValue(4, "Actions");*/
 
-    // Set column sizes
+	// Set column sizes
 	grid->SetColSize(4, 100);
+
+    // Remove the header
+    grid->SetColLabelSize(0);
 
     // Fill the grid with some data
     grid->SetCellValue(0, 0, "John");
