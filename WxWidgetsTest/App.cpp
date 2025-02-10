@@ -1,9 +1,9 @@
 #include "App.h"
-#include "MainFrame.h"
+#include "ChartFrame.h"
 #include <wx/wx.h>
 
 bool App::OnInit() {
-	MainFrame* frame = new MainFrame("Hello World");
+	ChartFrame* frame = new ChartFrame("Hello World");
 	frame->SetSize(600, 400);
 	frame->Center();
 	frame->Show(true);
